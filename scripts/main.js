@@ -177,7 +177,7 @@ var main = (function(){
                     refreshGameHTML();
 
                     if(isGameWon()){
-                        alert("You have won in "+moves_counter+" moves");
+                        document.getElementById('success-message').innerHTML = config.success_html(moves_counter);
                     }
                 }
             });
