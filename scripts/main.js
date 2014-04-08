@@ -123,8 +123,9 @@ var main = (function(){
     }
 
     var isGameWon   =   function(){
-        for(var i = 0; i < ((matrix_grid_size*matrix_grid_size)-1); i++ ){
-            if(i != (i+1)){
+        for(var i = 0; i < ((matrix_grid_size*matrix_grid_size)-2); i++ ){
+            if(game_array[i] != (i+1)){
+                console.log(game_array[i]);
                 return false;
             }
         }
@@ -187,15 +188,21 @@ var main = (function(){
     var prepareGame =   function(matrix_size){
         setMatrixGridSize(matrix_size);
         createGameArray();
-        game_array  =  randomizeGameArray(game_array)
+        game_array  =  randomizeGameArray(game_array);
         createGameHTML();
         setValidMovesArray();
         bindGameCellsToEvents();
+        moves_counter = 0;
+        updateMoves();
     }
 
     var bootstrap   =   function(){
         document.getElementById(config.game_type_control_id).addEventListener('change',function(){
-            prepareGame(this.options[this.selectedIndex].value)
+
+            if(this.options[this.selectedIndex].value!='Select'){
+                prepareGame(this.options[this.selectedIndex].value);
+            }
+
         });
     }
 

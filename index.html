@@ -44,18 +44,34 @@
                         </div>
 
                         <label for="inputEmail3" class="col-sm-2 control-label">Total Moves</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-5">
                             <p class="form-control-static" id="moves-counter">0</p>
                         </div>
+
+
+
                     </div>
 
                 </form>
 
-            </div>
-            <div id="game_container" class="well well-lg game-container">
 
             </div>
+            <div class="well">
+                <details>
+                    <summary>Rules.</summary>
+                    <div>
+                        <ol>
+                            <li>The object of the game is to arrange all the number in ascending order. Starting to from top left to bottom right corner</li>
+                            <li>The movement of cells is possible only though moving of the blank space.</li>
+                            <li>You can switch the blank space with TOP RIGHT BOTTOM or LEFT element of the blank space.</li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+            <div id="game_container" class="well well-lg game-container"></div>
         </div>
+
+
         <script src="scripts/config.js"></script>
         <script src="scripts/main.js"></script>
 
