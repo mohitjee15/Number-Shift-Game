@@ -1,0 +1,10 @@
+.game-cell{
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.game-container{
+    text-align: center;
+    font-size: 27px;
+    color: black;
+}
